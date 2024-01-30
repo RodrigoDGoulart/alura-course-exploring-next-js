@@ -1,11 +1,12 @@
 import Link from "../src/components/Link";
+import Head from "next/head";
 
 // obs.: ambas as funções getStaticProps e getServerSideProps rodam a cada acesso quando projeto está rodando como dev
 
-// export async function getStaticProps() {
+export async function getStaticProps() {
 // getStaticProps roda uma vez na build. Não é rodado outra vez no acesso
 
-export async function getServerSideProps() {
+// export async function getServerSideProps() {
 // getServerSideProps é rodado a cada acesso na página
 
   console.log('rodando');
@@ -24,6 +25,9 @@ export async function getServerSideProps() {
 export default function Faq({ faq }) {
   return (
     <div>
+      <Head>
+        <title>FAQ - Alura Cases Campanha</title>
+      </Head>
       <h1>FAQ</h1>
       <Link href="/">Home</Link>
       <ul>
