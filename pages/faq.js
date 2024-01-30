@@ -1,5 +1,5 @@
 import Link from "../src/components/Link";
-import Head from "next/head";
+import PageTitle from "../src/components/PageTitle";
 
 // obs.: ambas as funções getStaticProps e getServerSideProps rodam a cada acesso quando projeto está rodando como dev
 
@@ -25,9 +25,7 @@ export async function getStaticProps() {
 export default function Faq({ faq }) {
   return (
     <div>
-      <Head>
-        <title>FAQ - Alura Cases Campanha</title>
-      </Head>
+      <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
       <h1>FAQ</h1>
       <Link href="/">Home</Link>
       <ul>
