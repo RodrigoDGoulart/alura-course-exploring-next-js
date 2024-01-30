@@ -1,5 +1,6 @@
 import Link from "../src/components/Link";
 import PageTitle from "../src/components/PageTitle";
+import FAQScreen from "../src/screens/FaqScreen";
 
 // obs.: ambas as funções getStaticProps e getServerSideProps rodam a cada acesso quando projeto está rodando como dev
 
@@ -22,22 +23,4 @@ export async function getStaticProps() {
   };
 }
 
-export default function Faq({ faq }) {
-  return (
-    <div>
-      <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
-      <h1>FAQ</h1>
-      <Link href="/">Home</Link>
-      <ul>
-        {faq.map(({ answer, question }) => (
-          <li key={question}>
-            <article>
-              <h1>{question}</h1>
-              <p>{answer}</p>
-            </article>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+export default FAQScreen
